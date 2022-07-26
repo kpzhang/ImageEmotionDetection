@@ -25,4 +25,4 @@ Given the model size, please contact the author (kpzhang@umd.edu) for trained mo
 
 
 ## [Disclaimer]
-Please refer to our forthcoming paper at MIS Quarterly: "![image](https://user-images.githubusercontent.com/729885/181091161-8d110760-c6b5-4786-a42f-6aa4ecb823cc.png)"
+Please refer to our forthcoming paper at MIS Quarterly: "Pictures that are Worth a Thousand Donations: How Emotions in Project Images Drive the Success of Online Charity Fundraising Campaigns? An Image Design Perspective"
