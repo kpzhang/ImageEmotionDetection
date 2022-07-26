@@ -5,8 +5,8 @@
 ## `kickstarter_data`: 
     Thumbnail images for all crowdfunding projects during our study period. 
 
-## ANPs.csv:
+## `ANPs.csv`:
 All adjective-noun pairs for these kickstarter images
 
-## combined.csv:
+## `combined_data_7607.csv`:
 The combination of detected objects and ANPs
