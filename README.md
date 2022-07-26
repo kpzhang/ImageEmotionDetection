@@ -33,5 +33,5 @@ The trained model can be downloaded <a href='https://github.com/kpzhang/kpzhang.
 ## [Disclaimer]
 
 Please refer to our forthcoming paper at MIS Quarterly for details: 
-"Pictures that are Worth a Thousand Donations: How Emotions in Project Images Drive the Success of Online Charity Fundraising Campaigns? An Image Design Perspective," Jian-Ren Hou, Jennifer Zhang, and Kunpeng Zhang.
+`Pictures that are Worth a Thousand Donations: How Emotions in Project Images Drive the Success of Online Charity Fundraising Campaigns? An Image Design Perspective,` Jian-Ren Hou, Jennifer Zhang, and Kunpeng Zhang.
 
