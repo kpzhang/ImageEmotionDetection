@@ -18,7 +18,7 @@
 - `data/kickstarter_data`: images of all crowdfunding project for this study
 
 ## [Trained Model]
-Given the model size, we do not upload the trained model here. To request it, please contact the authors.
+The trained model can be downloaded [here] (https://kpzhang.github.io/models/model_weights.h5)
 
 ## [Run] 
 - `FPN_train.py`: Feature Pyramid Network
