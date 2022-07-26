@@ -26,4 +26,4 @@ Given the model size, please contact the author (kpzhang@umd.edu) for trained mo
 
 
 ## [Disclaimer]
-Please refer to our forthcoming paper at MIS Quarterly: "Pictures that are Worth a Thousand Donations: How Emotions in Project Images Drive the Success of Online Charity Fundraising Campaigns? An Image Design Perspective", Jian-Ren Hou, Jennifer Zhang, and Kunpeng Zhang.
+Please refer to our forthcoming paper at MIS Quarterly for details: "Pictures that are Worth a Thousand Donations: How Emotions in Project Images Drive the Success of Online Charity Fundraising Campaigns? An Image Design Perspective", Jian-Ren Hou, Jennifer Zhang, and Kunpeng Zhang.
