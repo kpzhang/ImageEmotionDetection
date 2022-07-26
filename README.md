@@ -8,7 +8,7 @@
 
 ## [Requirement]
 - Python >= 3.x
-- scikit-learn https://scikit-learn.org/stable/
+- Scikit-learn https://scikit-learn.org/stable/
 - Numpy https://numpy.org/
 - Keras https://keras.io/
 - CV2 https://pypi.org/project/opencv-python/
