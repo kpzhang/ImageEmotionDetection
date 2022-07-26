@@ -5,11 +5,11 @@ Emotion Detection via a Deep Learning Framework
 
 
 ## [Requirement]
-- Python > 3.x
-- scikit-learn
-- Numpy
-- Keras
-- CV2
+- Python >= 3.x
+- scikit-learn https://scikit-learn.org/stable/
+- Numpy https://numpy.org/
+- Keras https://keras.io/
+- CV2 https://pypi.org/project/opencv-python/
 
 ## [Data]
 - data/pretrained_data: only a subset of sampled images. For the full set, please email: `kpzhang@umd.edu`
