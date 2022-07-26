@@ -23,6 +23,7 @@ Given the model size, we do not upload the trained model here. To request it, pl
 - `train.py`: training procedure of our model
 - `predict.py`: predicting image emotions
 - `xgboost.py`: one of baselines using XGBoost
+- `get_objects_google.py`: using google vision API to obtain objects embedded in an image
 
 
 ## [Disclaimer]
