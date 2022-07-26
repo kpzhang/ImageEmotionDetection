@@ -1,0 +1,3 @@
+pretrained_data: only a subset of sampled images. For those who need the full dataset for training their own models, please send your email to: kpzhang@umd.edu
+
+kickstarter_data: thumbnail images for all crowdfunding projects during our study period. 
