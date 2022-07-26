@@ -25,6 +25,8 @@ Given the model size, we do not upload the trained model here. To request it, pl
 - `xgboost.py`: one of baselines using XGBoost
 - `get_objects_google.py`: using google vision API to obtain objects embedded in an image
 
+- To obtain the ANPs, please refer to the details here: https://www.ee.columbia.edu/ln/dvmm/vso/download/sentibank.html
+
 
 ## [Disclaimer]
 Please refer to our forthcoming paper at MIS Quarterly for details: "Pictures that are Worth a Thousand Donations: How Emotions in Project Images Drive the Success of Online Charity Fundraising Campaigns? An Image Design Perspective", Jian-Ren Hou, Jennifer Zhang, and Kunpeng Zhang.
