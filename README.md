@@ -12,8 +12,8 @@ Emotion Detection via a Deep Learning Framework
 - CV2 https://pypi.org/project/opencv-python/
 
 ## [Data]
-- data/pretrained_data: only a subset of sampled images. For the full set, please email: `kpzhang@umd.edu`
-- data/kickstarter_data: images of all crowdfunding project for this study
+- `data/pretrained_data`: only a subset of sampled images. For the full set, please email: kpzhang@umd.edu
+- `data/kickstarter_data`: images of all crowdfunding project for this study
 
 ## [Trained Model]
 Given the model size, please contact the author (kpzhang@umd.edu) for trained model.
