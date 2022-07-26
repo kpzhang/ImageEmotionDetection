@@ -16,7 +16,7 @@ Emotion Detection via a Deep Learning Framework
 - `data/kickstarter_data`: images of all crowdfunding project for this study
 
 ## [Trained Model]
-Given the model size, please contact the author (kpzhang@umd.edu) for trained model.
+Given the model size, we do not upload the trained model here. To request it, please contact the authors.
 
 ## [Run] 
 - `FPN_train.py`: Feature Pyramid Network
