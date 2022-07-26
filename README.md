@@ -22,6 +22,7 @@ Given the model size, please contact the author (kpzhang@umd.edu) for trained mo
 - `FPN_train.py`: Feature Pyramid Network
 - `train.py`: training procedure of our model
 - `predict.py`: predicting image emotions
+- `xgboost.py`: one of baselines using XGBoost
 
 
 ## [Disclaimer]
