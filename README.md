@@ -15,7 +15,7 @@
 
 ## [Data]
 - `data/pretrained_data`: only a subset of sampled images. For the full set, please email: kpzhang@umd.edu or refer to: https://dl.acm.org/doi/10.5555/3015812.3015857
-- `data/kickstarter_data`: images of all crowdfunding project for this study
+- `data/kickstarter_data`: images of all crowdfunding projects for this study
 
 ## [Trained Model]
 The trained model can be downloaded <a href='https://kpzhang.github.io/models/model_weights.h5'>here</src>
