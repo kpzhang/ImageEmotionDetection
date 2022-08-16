@@ -2,14 +2,13 @@ import os,sys,re
 import time
 import codecs
 
-import cv2
-
 from sklearn.model_selection import KFold
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn import preprocessing
 
 import scipy
-from keras.preprocessing import image
+from tensorflow import keras
+from keras.preprocessing.image import load_img, img_to_array
 
 import numpy as np
 import tensorflow as tf
@@ -52,8 +51,8 @@ for i in range(len(lines)):
 	anps.append(anp)
 	tags.append(tag)
 
-	img = image.load_img(img_fname, target_size=(height, width,3))
-	img = image.img_to_array(img)
+	img = load_img(img_fname, target_size=(height, width,3))
+	img = img_to_array(img)
 	img = img/255
 	img_X.append(img)
 	labels.append(label)
@@ -70,20 +69,18 @@ for i in range(len(index)):
 	encoding[ind] = 1
 	y.append(encoding)
 
-anp_X = vectorizer.fit_transform(anps)
-tag_X = vectorizer.fit_transform(tags)
+anp_X = vectorizer.fit_transform(anps).toarray()
+tag_X = vectorizer.fit_transform(tags).toarray()
 y = np.array(y)
 #print(img_X.shape, anp_X.shape, tag_X.shape, y.shape)
-print 'ready for deep learning...'
+print('ready for deep learning...')
 
 ## training
-from keras import backend as K
 from keras.applications import VGG16, ResNet50, Xception, NASNetLarge
 
 from keras import optimizers
-from keras.layers import Dense, Input
+from keras.layers import Dense, Input, Concatenate
 from keras.models import Model
-from keras.layers.merge import concatenate
 
 
 img_input = Input(shape=(224,224,3),name='image_input')
@@ -125,4 +122,4 @@ for train, test in kfold.split(img_X):
 	print "time:",time.time() - t1
 	t1 = time.time()
 
-print "%.2f%% (+/- %.2f%%)" % (np.mean(cvscores), np.std(cvscores))
+print("%.2f%% (+/- %.2f%%)" % (np.mean(cvscores), np.std(cvscores)))
