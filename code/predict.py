@@ -1,24 +1,23 @@
 import os,sys,re
 import codecs
 
-import cv2
-
 from sklearn.model_selection import KFold
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn import preprocessing
 
-from keras.preprocessing import image
-from keras import backend as K
-from keras.applications import Xception
+from tensorflow import keras
+from keras.preprocessing.image import load_img, img_to_array
+from keras.applications.xception import Xception
 
 from keras import optimizers
-from keras.layers import Dense, Input, Flatten
+from keras.layers import Dense, Input, Flatten, Concatenate
 from keras.models import Model
-from keras.layers.merge import concatenate
 
 import matplotlib.pyplot as plt
 
 import numpy as np
+from scipy import sparse
+
 
 seed = 2019
 np.random.seed(seed)
@@ -26,9 +25,9 @@ vectorizer = CountVectorizer()
 le = preprocessing.LabelEncoder()
 
 
-height,width = 224,224
+height,width = 299,299
 
-fh = open(sys.argv[1],'r') # combined_data_7607.csv
+fh = open('combined_data_7607.csv','r')
 lines = fh.readlines()
 fh.close()
 
@@ -57,8 +56,8 @@ for i in range(1,len(lines)):
 	anps.append(anp)
 	tags.append(tag)
 
-	img = image.load_img(img_fname, target_size=(height, width,3))
-	img = image.img_to_array(img)
+	img = load_img(img_fname, target_size=(height, width,3))
+	img = mg_to_array(img)
 	img = img/255
 	img_X.append(img)
 	labels.append(label)
@@ -101,18 +100,18 @@ for img_id in tags_mapping:
 	anps.append(anps_mapping[img_id])
 	tags.append(tags_mapping[img_id])
 
-anp_X= vectorizer.fit_transform(anps)
-tag_X = vectorizer.fit_transform(tags)
-print img_X_train.shape,anp_X.shape,tag_X.shape
+anp_X= vectorizer.fit_transform(anps).toarray()
+tag_X = vectorizer.fit_transform(tags).toarray()
 y = np.array(y)
+print(img_X_train.shape,anp_X.shape,tag_X.shape)
 
 # obtain features for testing images
 img_X_test = []
 for i in range(len(img_ids)):
 	img_id = img_ids[i]
 	img_fname = 'kickstarter_images/'+img_id+'.png'
-	img = image.load_img(img_fname, target_size=(height, width,3))
-	img = image.img_to_array(img)
+	img = load_img(img_fname, target_size=(height, width,3))
+	img = img_to_array(img)
 	img = img/255
 	img_X_test.append(img)
 img_X_test = np.array(img_X_test)
@@ -123,8 +122,8 @@ BATCH_SIZE = 64
 NB_EPOCH = 20
 n_training = img_X_train.shape[0]
 
-img_input = Input(shape=(224,224,3),name='image_input')
-net = Xception(weights='imagenet', include_top=True)
+img_input = Input(shape=(height,width,3),name='image_input')
+net = Xception(weights='imagenet', include_top=True) # this can be replaced by many other pretrained deep models
 net.trainable = False
 for l in net.layers:
 	l.trainable = False
@@ -145,9 +144,11 @@ model = Model(inputs=[img_input,anp_input,tag_input],outputs=prediction)
 model.compile(loss='categorical_crossentropy',optimizer='adam', metrics=['accuracy'])
 
 model.fit([img_X_train,anp_X[:n_training],tag_X[:n_training]],y, batch_size=BATCH_SIZE, epochs=NB_EPOCH, verbose=0)
+#model.save('buffy_emotion_model.h5')  # save a model
+#model = keras.models.load_model('buffy_emotion_model.h5') # load the saved model
 
 output = model.predict([img_X_test, anp_X[n_training:],tag_X[n_training:]], verbose=0)
 
 # output
 for i in range(len(img_ids)):
-	print img_ids[i],':',','.join([str(v) for v in output[i]]),',',emotions[np.argmax(output[i])]
+	print(img_ids[i],':',','.join([str(v) for v in output[i]]),',',emotions[np.argmax(output[i])])
