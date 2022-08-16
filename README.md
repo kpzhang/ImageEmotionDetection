@@ -21,13 +21,15 @@
 The trained model can be downloaded <a href='https://github.com/kpzhang/kpzhang.github.io/tree/main/models/model_weights.h5'>here</a>
 
 ## [Run] 
+- `get_objects_google.py`: using google vision API to obtain objects embedded in an image
+- go to `ANP` folder for codes to obtain ANPs for each image
 - `FPN_train.py`: Feature Pyramid Network
 - `train.py`: training procedure of our model
 - `predict.py`: predicting image emotions
 - `xgboost.py`: one of baselines using XGBoost
-- `get_objects_google.py`: using google vision API to obtain objects embedded in an image
 
-- To obtain the ANPs, please refer to the details here: https://www.ee.columbia.edu/ln/dvmm/vso/download/sentibank.html
+
+- To obtain the ANPs, please refer to the details here: https://www.ee.columbia.edu/ln/dvmm/vso/download/sentibank.html or got to the foler `ANP`.
 
 
 ## [Disclaimer]
