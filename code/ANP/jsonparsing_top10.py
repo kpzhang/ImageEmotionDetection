@@ -3,12 +3,12 @@ import json
 import itertools
 
 img_ids = []
-with open('buffy_path_file.txt','r') as fh:
+with open('path_file.txt','r') as fh:
 	lines = fh.readlines()
 	for i in range(len(lines)):
 		img_ids.append(lines[i].strip()[:-4].replace('buffy_images\\',''))
 
-with open('buffy_path_file.json', 'r') as f:
+with open('path_file.json', 'r') as f:
     data = json.load(f)
 
 list = []
