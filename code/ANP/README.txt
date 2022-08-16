@@ -9,6 +9,12 @@ Under windows 7+, you can probably run above command directly. Otherwise you may
 Before compiling, put the extract_nfeatures.cpp under caffe/tools. After compiling, copy/link caffe/build/tools/extract_nfeatures.bin or exe to DeepSentiBank folder.
 There is also a .m file that can read the raw feature file (fc7.dat prob.dat) generated from the executable extract_nfeatures. into matlab.
 
+Note:
+-(1) Due to the size limit, caffe_sentibank_train_iter_25000 should be downloaded from the sentibank website. 
+
+-(2) libopenblas.dll should be unzipped. 
+
+
 Please cite:
 @article{chen2014deepsentibank,
   title={Deepsentibank: Visual sentiment concept classification with deep convolutional neural networks},
