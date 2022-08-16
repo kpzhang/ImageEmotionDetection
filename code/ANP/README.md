@@ -13,7 +13,7 @@ There is also a .m file that can read the raw feature file (fc7.dat prob.dat) ge
 
 -(1) Due to the size limit, `caffe_sentibank_train_iter_25000` should be downloaded from the sentibank website. 
 
--(2) libopenblas.dll should be unzipped. 
+-(2) `libopenblas.dll` should be unzipped to this folder for sentiBank.py to be executed. 
 
 ## `Overall steps:`
 
