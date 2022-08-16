@@ -123,7 +123,10 @@ NB_EPOCH = 20
 n_training = img_X_train.shape[0]
 
 img_input = Input(shape=(height,width,3),name='image_input')
-net = Xception(weights='imagenet', include_top=True) # this can be replaced by many other pretrained deep models
+# the following line can be replaced by many other pretrained deep models
+#net = VGG16(weights='imagenet', include_top=True)
+net = Xception(weights='imagenet', include_top=True)
+#net = NASNetLarge(weights='imagenet', include_top=True)
 net.trainable = False
 for l in net.layers:
 	l.trainable = False
