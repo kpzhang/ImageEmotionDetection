@@ -14,6 +14,12 @@ Note:
 
 -(2) libopenblas.dll should be unzipped. 
 
+Overall steps:
+
+- (i) Use gen_path_file.py to generate path file: path_file.txt
+- (ii) Use sentiBank.py to obtain ANP json file: path_file.json
+- (iii) Use jsonparsing_top10.py to extract top 10 ANPs for each image
+
 
 Please cite:
 @article{chen2014deepsentibank,
