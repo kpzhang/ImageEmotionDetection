@@ -19,6 +19,7 @@
 
 ## [Trained Model]
 The trained model can be downloaded <a href='https://github.com/kpzhang/kpzhang.github.io/tree/main/models/model_weights.h5'>here</a>
+For other models from the baselines, please contact us.
 
 ## [Run] 
 - `get_objects_google.py`: using google vision API to obtain objects embedded in an image
